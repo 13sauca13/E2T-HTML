@@ -1,0 +1,19 @@
+@media (max-width: 600px){
+    .cabecera{
+        display: grid;
+        width: 100%;
+        text-align: center;
+    }
+
+    .enlace{
+        padding: 5px;
+        width: 100%;
+    }
+
+    .enlace button{
+        width: 200px;
+    }
+    .foto{
+        max-width: 95%;
+    }
+}
