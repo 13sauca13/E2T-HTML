@@ -2,6 +2,12 @@ html, head, body{
     background-color: lightsteelblue;
 }
 
+.aviso_legal{
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
 .cabecera{
     width: 100%;
     background-color: cadetblue;
@@ -15,7 +21,7 @@ html, head, body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
+    height: 75px;
 }
 
 .enlace{
@@ -31,6 +37,8 @@ html, head, body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    color: darkcyan;
 }
 
 .foto{
@@ -38,6 +46,7 @@ html, head, body{
     padding: 20px;
     border-radius: 100px;
     max-height: 500px;
+    max-width: 100%;
 }
 
 .contenido{
@@ -50,17 +59,32 @@ html, head, body{
     padding-right: 70px;
     align-items: center;
     justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
 }
 
 .cuadricula{
     background-color: transparent;
     padding: 10px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.cuadricula img{
+    max-width: 95%;
 }
 
 .cuadricula div{
     display: flex;
     flex-flow: column wrap;
+}
+
+#mapa{
+    flex-direction: row;
+}
+
+#mapa div{
+    max-width: 50%;
+    padding: 20px;
 }

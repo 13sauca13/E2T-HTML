@@ -1,72 +1,71 @@
-html, head, body{
-    background-color: lightsteelblue;
+
+@media (max-width: 1000px) {
+    #mapa{
+        flex-direction: column;
+    }
+    #mapa div{
+        max-width: 100%;
+    }    
 }
 
-.cabecera{
-    width: 100%;
-    background-color: cadetblue;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+@media (max-width: 600px){
+    .cabecera{
+        display: grid;
+        width: 100%;
+        text-align: center;
+    }
+
+    .enlace{
+        padding: 5px;
+        width: 100%;
+    }
+
+    .enlace button{
+        width: 200px;
+    }
+
+    .foto{
+        max-width: 95%;
+    }
+
+    .cuadricula{
+        grid-template-columns: 1fr;
+    }
 }
 
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100px;
-}
+@media print{
+    html, head, body, .titular{
+        background-color: white;
+    }
 
-.enlace{
-    width: 20%;
-    justify-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
+    .cabecera{
+        display: none;
+    }
 
-.titular{
-    width: 100%;
-    background-color: lavender;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+    .aviso_legal{
+        display: flex;
+        color: crimson;
+        gap: 20px;
+    }
 
-.foto{
-    align-content: center;
-    padding: 20px;
-    border-radius: 100px;
-    max-height: 500px;
-    max-width: 100%;
-}
+    .aviso_legal img{
+        max-height: 50px;
+    }
 
-.contenido{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    background-color: transparent;
-    padding-top: 70px;
-    padding-left: 70px;
-    padding-right: 70px;
-    align-items: center;
-    justify-content: center;
-}
+    .titular{
+        font-size: 1.6rem;
+        color: black;
+    }
 
-.cuadricula{
-    background-color: transparent;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
+    .foto{
+        max-height: 200px;
+    }
 
-.cuadricula img{
-    max-width: 95%;
-}
-
-.cuadricula div{
-    display: flex;
-    flex-flow: column wrap;
+    .contenido{
+        font-size: 1rem;
+    }
+    
+    #mapa{
+        flex-direction: column;
+    }
 }
